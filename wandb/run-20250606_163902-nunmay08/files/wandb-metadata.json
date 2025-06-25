@@ -1,0 +1,26 @@
+{
+    "os": "Linux-6.11.0-26-generic-x86_64-with-glibc2.39",
+    "python": "3.10.17",
+    "heartbeatAt": "2025-06-06T14:39:03.816709",
+    "startedAt": "2025-06-06T14:39:02.880388",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 22,
+    "cuda": null,
+    "args": [
+        "further_pretrain.json"
+    ],
+    "state": "running",
+    "program": "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py",
+    "codePath": "run_mlm_wwm.py",
+    "git": {
+        "remote": "https://github.com/FatemehFsD/IssueReportGithub.git",
+        "commit": "1371110db7e30d4b4ab2c21fcbf896723582688a"
+    },
+    "email": "dans@zhaw.ch",
+    "root": "/home/dans/Documents/GhafariPhd/MemVul-main",
+    "host": "workstation",
+    "username": "dans",
+    "executable": "/home/dans/.virtualenvs/memvul/bin/python"
+}

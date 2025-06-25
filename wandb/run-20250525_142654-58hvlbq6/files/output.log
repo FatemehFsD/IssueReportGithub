@@ -1,0 +1,116 @@
+  0%|                                                                                                                                                                      | 0/1519900 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py", line 411, in <module>
+    main()
+  File "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py", line 370, in main
+    train_result = trainer.train(model_path=checkpoint)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 1409, in train
+    return inner_training_loop(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 1651, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 2345, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 2377, in compute_loss
+    outputs = model(**inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 1351, in forward
+    outputs = self.bert(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 1018, in forward
+    encoder_outputs = self.encoder(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 607, in forward
+    layer_outputs = layer_module(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 493, in forward
+    self_attention_outputs = self.attention(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 423, in forward
+    self_outputs = self.self(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 355, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/dropout.py", line 70, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/functional.py", line 1425, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 7.75 GiB of which 76.56 MiB is free. Including non-PyTorch memory, this process has 7.67 GiB memory in use. Of the allocated memory 7.48 GiB is allocated by PyTorch, and 37.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Traceback (most recent call last):
+  File "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py", line 411, in <module>
+    main()
+  File "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py", line 370, in main
+    train_result = trainer.train(model_path=checkpoint)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 1409, in train
+    return inner_training_loop(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 1651, in _inner_training_loop
+    tr_loss_step = self.training_step(model, inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 2345, in training_step
+    loss = self.compute_loss(model, inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/trainer.py", line 2377, in compute_loss
+    outputs = model(**inputs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 1351, in forward
+    outputs = self.bert(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 1018, in forward
+    encoder_outputs = self.encoder(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 607, in forward
+    layer_outputs = layer_module(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 493, in forward
+    self_attention_outputs = self.attention(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 423, in forward
+    self_outputs = self.self(
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/transformers/models/bert/modeling_bert.py", line 355, in forward
+    attention_probs = self.dropout(attention_probs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1751, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1762, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/modules/dropout.py", line 70, in forward
+    return F.dropout(input, self.p, self.training, self.inplace)
+  File "/home/dans/.virtualenvs/memvul/lib/python3.10/site-packages/torch/nn/functional.py", line 1425, in dropout
+    _VF.dropout_(input, p, training) if inplace else _VF.dropout(input, p, training)
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 192.00 MiB. GPU 0 has a total capacity of 7.75 GiB of which 76.56 MiB is free. Including non-PyTorch memory, this process has 7.67 GiB memory in use. Of the allocated memory 7.48 GiB is allocated by PyTorch, and 37.77 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)

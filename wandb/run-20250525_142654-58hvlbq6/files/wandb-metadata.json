@@ -1,0 +1,20 @@
+{
+    "os": "Linux-6.11.0-25-generic-x86_64-with-glibc2.39",
+    "python": "3.10.17",
+    "heartbeatAt": "2025-05-25T12:26:56.109098",
+    "startedAt": "2025-05-25T12:26:54.853885",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "gpu_count": 1,
+    "cpu_count": 22,
+    "cuda": null,
+    "args": [
+        "further_pretrain.json"
+    ],
+    "state": "running",
+    "program": "/home/dans/Documents/GhafariPhd/MemVul-main/run_mlm_wwm.py",
+    "codePath": "run_mlm_wwm.py",
+    "host": "workstation",
+    "username": "dans",
+    "executable": "/home/dans/.virtualenvs/memvul/bin/python"
+}
